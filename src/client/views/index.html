@@ -34,6 +34,26 @@
         <footer>
             <p>This is a footer</p>
         </footer>
+        <script>
+            // Check if Service Worker is supported by the browser
+            if ('serviceWorker' in navigator) {
 
+                // Add an event listener for the 'load' event
+                window.addEventListener('load', () => {
+
+                // Try to register the Service Worker
+                navigator.serviceWorker.register('/service-worker.js').then(registration => {
+
+                // Log success message with the scope of the registered Service Worker
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+
+                }, err => {
+                    // Log error message if registration fails
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+
+            });
+            }
+        </script>
     </body>
 </html>
