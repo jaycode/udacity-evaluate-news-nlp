@@ -2,7 +2,7 @@
 
 This project creates a simple client-server NodeJs app that passes a URL to [MeaningCloud API](https://www.meaningcloud.com/).
 
-## To run
+## How to run the development app
 
 - Use node: `nvm use node`
 - Install all packages: `npm install`
@@ -20,7 +20,16 @@ You should get the following output:
 
 ![Output](media/output_ok.png)
 
-## To test
+## How to run the production app
+
+Same as above, but instead of running `npm run build-dev` run the following commands:
+
+- `npm run build-prod`
+- `npm run serve`
+
+The first command will create files in the `dist/` directory and the second command will serve them on `http://localhost:3000`.
+
+## How to test
 
 Testing is done with [Jest](https://jestjs.io/). Run the following command to run the test suites:
 

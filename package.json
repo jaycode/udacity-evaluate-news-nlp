@@ -6,7 +6,8 @@
     "test": "jest",
     "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server  --config webpack.dev.js"
+    "build-dev": "webpack-dev-server  --config webpack.dev.js",
+    "serve": "node serve_prod_client.js"
   },
   "jest": {
     "testEnvironment": "jsdom"
